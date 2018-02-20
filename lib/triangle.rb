@@ -15,7 +15,8 @@ class Triangle
       raise TriangleError
     else #valid triangles
       if @side1==@side2==@side3
-        "Equilateral"
+        :equilateral
+      elsif 
     end
     
   end
