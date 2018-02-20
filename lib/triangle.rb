@@ -10,7 +10,14 @@ class Triangle
   def kind
     # illegal triangles
     if @side1 =< 0 || @side2 =< 0 || @side3 =< 0
-      
+      raise TriangleError
+    elsif (@side1 + @side2 <= @side3) || (@side2 + @side3 <= @side1) || (@side1 + @side3 <= @side2)
+      raise TriangleError
+    else #valid triangles
+      if @side1==@side2==@side3
+        "Equilateral"
+    end
+    
   end
   
 end
